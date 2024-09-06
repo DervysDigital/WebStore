@@ -42,9 +42,40 @@ body {
     justify-content: space-between;
 }
 
+
 .logo img {
     width: 75px; 
     border-radius: 10px;
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.logo img:hover {
+    transform: scale(1.3); /* Aumenta el tamaño */
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Aumenta el tamaño */
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(driplife-banner3.png);
+    animation: showRight 1s ease forwards;
+    animation-delay: .8s;
 }
 
 .menu .navbar ul li {
@@ -62,6 +93,12 @@ body {
 
 .menu .navbar ul li a:hover {
     color: #00d9ff; /* Color al pasar el cursor sobre el enlace */
+    transition: all;
+    transition-duration: 1s;
+}
+
+.navbar ul li a.initi {
+    color: #00c3e6;
 }
 
 #menu{
@@ -82,12 +119,18 @@ body {
 }
 
 .header-content h1 {
+    position: relative;
     font-size: 75px;
     line-height: 80px;
     color: #fffdfc;
     text-transform: uppercase;
     margin-bottom: 35px;
     text-shadow: 1px 1px #00c3e6;
+    transition: transform 0.5s ease; /* Suaviza el movimiento */
+}
+
+.header-content h1:hover {
+    transform: translateY(-10px); /* Desplaza hacia arriba */
 }
 
 .header-content p {
@@ -102,19 +145,21 @@ body {
     padding: 11px 35px;
     background-color: #00c3e6;
     color: #fffdfc;
-    text-transform: uppercase;
     border-radius: 10px;
-    font-weight: 500;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Transiciones para color y escala */
 }
 
 .btn-1:hover {
-    background-color: black;
+    background-color: black; /* Color al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
 }
+
 
 .Drip {
     background-color: #fbfcfc;
     padding: 100px 0;
     position: relative;
+    background-color: #fbfcfc;
 }
 
 .Drip-content {
@@ -130,6 +175,11 @@ body {
     margin-bottom: 15px;
     text-shadow: 1px 1px #00d9ff; 
     padding-bottom: 10px;
+    transition: transform 0.5s ease; /* Suaviza el movimiento */
+}
+
+.Drip-content h2:hover {
+    transform: translateY(-10px); /* Desplaza hacia arriba */
 }
 
 .txt-p {
@@ -154,6 +204,17 @@ body {
     box-shadow: 5px 5px 50px 0px rgba(54, 163, 235, 0.521);
     width: 250px;
     border-radius: 15px
+}
+
+.Drip-1 img {
+    box-shadow: 5px 5px 50px rgba(54, 163, 235, 0.521);
+    transition: box-shadow 0.5s ease; /* Suaviza el cambio de sombra */
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.Drip-1 img:hover {
+    box-shadow: 10px 10px 70px rgb(5, 5, 5); /* Aumenta la sombra al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
 .Drip-img {
@@ -194,6 +255,11 @@ body {
     margin-bottom: 50px;
     text-align: center;
     text-shadow: 1px 1px #00d9ff;
+    transition: transform 0.5s ease; /* Suaviza el movimiento */
+}
+
+.Promo-content h2:hover {
+    transform: translateY(-10px); /* Desplaza hacia arriba */
 }
 
 .Promo-content p {
@@ -224,6 +290,17 @@ body {
     height: 250px; 
     object-fit: cover;
     box-shadow: 5px 5px 50px 0px rgba(54, 163, 235, 0.521);
+}
+
+.Promo-1 img {
+    box-shadow: 5px 5px 50px rgba(54, 163, 235, 0.521);
+    transition: box-shadow 0.5s ease; /* Suaviza el cambio de sombra */
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.Promo-1 img:hover {
+    box-shadow: 10px 10px 70px rgb(255, 255, 255); /* Aumenta la sombra al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
 .Promo-1 h3 {
@@ -259,6 +336,15 @@ body {
     width: 50%;
 }
 
+.General-2, .General-3 {
+    background-color: #fbfcfc;
+    transition: background-color 0.5s ease; /* Suaviza el cambio de color */
+}
+
+.General-2:hover, .General-3:hover {
+    background-color: #e0e0e0; /* Color al hacer hover */
+}
+
 .General-1 h2 {
     padding: 5px;
     font-size: 50px;
@@ -267,7 +353,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 20px;
     text-shadow: 1px 1px #00c3e6;
-    }
+}
 
 .General-1 p {
     padding: 0px;
@@ -285,6 +371,11 @@ body {
     text-shadow: 1px 1px rgba(54, 163, 235, 0.521);
     padding-bottom: 20px;
     font-size: 35px;
+    transition: transform 0.5s ease; /* Suaviza el movimiento */
+}
+
+.Catalog h2:hover {
+    transform: translateY(-10px); /* Desplaza hacia arriba */
 }
 
 .Catalog-content {
@@ -301,6 +392,17 @@ body {
     border-radius: 15px;
     margin: 20px 20px ;
     box-shadow: 5px 5px 50px 0px rgba(54, 163, 235, 0.521);
+}
+
+.clothes-1 img {
+    box-shadow: 5px 5px 50px rgba(54, 163, 235, 0.521);
+    transition: box-shadow 0.5s ease; /* Suaviza el cambio de sombra */
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.clothes-1 img:hover {
+    box-shadow: 10px 10px 70px rgb(5, 5, 5); /* Aumenta la sombra al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
 .clothes-1 h3 {
@@ -334,6 +436,11 @@ body {
     width: 250px;
     margin-bottom: 15px;
     box-shadow: #00d9ff;
+    transition: transform 0.5s ease; /* Suaviza el zoom */
+}
+
+.textop img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
 .textop h3 {
@@ -352,6 +459,10 @@ body {
     color: #c5c5c5;
     display: block;
     margin-bottom: 15px;
+}
+
+.link a:hover {
+    color: #00c3e6;
 }
 
 @media (max-width: 991px) {
@@ -471,4 +582,11 @@ body {
         text-align: center;
     }
 
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+        }
 }
